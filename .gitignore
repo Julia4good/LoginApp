@@ -1,0 +1,102 @@
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# IntelliJ IDEA
+*.iml
+.idea/caches
+.idea/libraries
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/gradle.xml
+.idea/misc.xml
+.idea/compiler.xml
+.idea/vcs.xml
+.idea/.name
+
+# Android Studio captures folder
+captures/
+
+# External native build folder
+.externalNativeBuild
+.cxx/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Log Files
+*.log
+
+# Keystore files (IMPORTANT - never commit these!)
+*.jks
+*.keystore
+key.properties
+
+# Google Services (Firebase config)
+# google-services.json  # Uncomment if you don't want to share Firebase config
+
+# Lint
+lint/
+```
+
+## Key Additions You Should Consider:
+
+### **Critical Security Items:**
+```
+*.jks
+*.keystore
+key.properties
+```
+These prevent you from accidentally committing **signing keys** (which would be a security risk).
+
+### **Useful Additions:**
+```
+*.apk
+*.aab
+*.dex
+*.log
+```
+These prevent committing build outputs and logs that don't belong in version control.
+
+## Should You Update?
+
+**Yes, I recommend updating** your root `.gitignore` to include at least the keystore files:
+
+1. Open `.gitignore` in your project root
+2. Add these lines at minimum:
+```
+# Keystore files - DO NOT COMMIT
+*.jks
+*.keystore
+key.properties
+
+# Build outputs
+*.apk
+*.aab
+*.dex
+
+# Logs
+*.log
